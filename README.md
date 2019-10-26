@@ -2,10 +2,10 @@
 Functional event-emitter library for javascript. Each time you yall a function on a current mimid, a new mimid is returned to the caller. This allows you to chain multiple emits and provides composability of event emitters.
 
 ```javascript
-import mockingbird fromm 'mockingbird'
+import mimid fromm 'mimid'
 
 const emitter = 
-  mockingbird()
+  mimid()
     .on("hello", () => console.log("hello there")
     .on("goodbye", (data) => console.log(`Goodbye ${data})
     
