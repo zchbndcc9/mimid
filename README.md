@@ -1,5 +1,5 @@
-# mockingbird
-Functional event-emitter library for javascript. Each time you yall a function on a current mockingbird, a new mockingbird is returned to the caller. This allows you to chain multiple emits and provides composability of event emitters.
+# Mimid
+Functional event-emitter library for javascript. Each time you yall a function on a current mimid, a new mimid is returned to the caller. This allows you to chain multiple emits and provides composability of event emitters.
 
 ```javascript
 import mockingbird fromm 'mockingbird'
