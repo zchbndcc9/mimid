@@ -1,14 +1,15 @@
 {
-  "name": "gnome",
-  "version": "1.0.0",
+  "name": "mimid",
+  "version": "0.1.0",
   "description": "Pure-ish functional event emitters in javascript",
   "main": "src/index.js",
-  "repository": "git@github.com:zchbndcc9/gnome.git",
+  "repository": "https://github.com/zchbndcc9/mimid.git",
   "author": "Zach Banducci <zbducci@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "mkdir -p build && babel src -d build && yarn minify",
-    "minify": "uglifyjs lib/index.js -o build/index.js"
+    "minify": "uglifyjs build/index.js -o build/index.js",
+    "publish": "yarn build && yarn publish"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
