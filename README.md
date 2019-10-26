@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/MimidLogo.jpg" alt="MimidLogo">
+</p>
+
 # Mimid
 Functional event-emitter library for javascript. Each time you yall a function on a current mimid, a new mimid is returned to the caller. This allows you to chain multiple emits and provides composability of event emitters.
 
