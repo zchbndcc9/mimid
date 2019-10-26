@@ -1,40 +1,40 @@
 /**
- * @typedef {Object} Gnome
+ * @typedef {Object} Mimid
  */
 
-const gnome = (listeners = []) => {
+const mimid = (listeners = []) => {
   /**
    * @param event event name to be listened to
    * @param handler callback function to be executed when the passed event is emitted
-   * @return {Gnome} gnome event emitter with event listener
+   * @return {Mimid} mimid event emitter with event listener
    */
-  const on = (event, handler) => gnome([...listeners, {event, handler}])
+  const on = (event, handler) => mimid([...listeners, {event, handler}])
   
   /**
    * @param event event name to be listened to
    * @param data callback function to be executed when the passed event is emitted
-   * @return {Gnome} gnome event emitter with same listeners
+   * @return {Mimid} mimid event emitter with same listeners
    */
   const emit = (event, data) => {
     listeners
       .filter(el => el.event === event)
       .map(({ handler }) => handler(data))
     
-    return gnome(listeners)
+    return mimid(listeners)
   }
   
   /**
    * Returns an event emitter without any 
    * @param event event name to be listened to
    * @param data callback function to be executed when the passed event is emitted
-   * @return {Gnome} gnome event emitter without event
+   * @return {Mimid} mimid event emitter without event
    */
-  const off = (event) => gnome(listeners.filter(el => el.event !== event))
+  const off = (event) => mimid(listeners.filter(el => el.event !== event))
 
   /**
-   * @return {Gnome} gnome event emitter without listeners
+   * @return {Mimid} mimid event emitter without listeners
    */
-  const close = () => gnome()
+  const close = () => mimid()
   
   return {
     on,
