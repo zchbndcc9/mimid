@@ -1,6 +1,6 @@
 {
   "name": "mimid",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Pure-ish functional event emitters in javascript",
   "main": "src/index.js",
   "repository": "https://github.com/zchbndcc9/mimid.git",
@@ -9,14 +9,13 @@
   "scripts": {
     "build": "mkdir -p build && babel src -d build && yarn minify",
     "minify": "uglifyjs build/index.js -o build/index.js",
-    "publish": "yarn build && yarn publish"
+    "publish": "yarn build"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "uglify-js": "^3.6.4"
   },
-  "dependencies": {
-    "@babel/preset-env": "^7.6.3"
-  }
+  "dependencies": {}
 }
